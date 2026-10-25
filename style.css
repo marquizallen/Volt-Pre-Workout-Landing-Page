@@ -170,6 +170,16 @@
     font-display: swap; 
   }
 
+  @font-face {
+    font-family: 'Wingdings 3';
+    src: url('fonts/Wingdings\ 3.woff2') format('woff2'),
+         url('fonts/Wingdings\ 3.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; 
+  }
+
+
   @keyframes fade-in {
     from {
         opacity: 0;
@@ -191,7 +201,7 @@
         transform: translateY(-80px); }
     }
 
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 720px){
 
         #mainModal {
             padding: 20px;
@@ -362,4 +372,6 @@
 #slideUpDiv.delete {
     display: none;
 }
+
+
 
