@@ -1,0 +1,365 @@
+#mainModal {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background-image: url("images/bg2.jpg");
+    background-size:cover;
+
+    border-radius: 50px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(125, 37, 240, 0.28);
+    width: 96%;
+    height: 800px;
+
+    margin-top: 5%;
+}
+#mainBody {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+
+    overflow: hidden;
+    height: 100vh;
+}
+
+#voltImage {
+    position: fixed;
+    top: 50px;
+    left: 27%;
+
+    animation: fade-in 1s ease forwards;
+}
+#voltImage img {
+
+    height: 830px;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    transform-origin: center center;
+
+    transition: transform 0.08s linear;
+    will-change: transform;
+
+
+}
+#productInfo {
+    text-align: center;
+
+    left: 10%;
+    top: 30%;
+    width: 700px;
+
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+
+    pointer-events: none; 
+}
+
+#productInfo.visible {
+    color: rgb(196, 196, 196);
+
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+} 
+#slogan {
+    font-family: 'Storm Gust';
+    font-weight: lighter;
+    font-size: 90px;
+    color: rgb(255, 255, 255);
+  color: #3b82f6; 
+  
+  background-image: linear-gradient(to right, #b11cfc, #70ff1d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+}
+#introHeader {
+    font-family: 'Tahoma';
+    font-weight: lighter;
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+}
+#voltText {
+    color: rgb(180, 255, 67);
+    font-family:'Storm Gust';
+    font-size: 170px;
+    letter-spacing: 5px;
+   
+}
+#preFormula {
+    color: rgb(205, 205, 205);
+    font-family:'Storm Gust';
+    letter-spacing: 5px;
+    font-size: 30px;
+}
+#flavor {
+    color: rgb(216, 88, 255);
+    font-family:'Storm Gust';
+    font-size: 30px;
+    letter-spacing: 8px;
+
+}
+#caption {
+    font-family: 'Avenir Light';
+    font-weight: lighter;
+    color: white;
+    font-size: 20px;
+}
+#buyNowBtn {
+    font-size: 30px;
+    height: 50px;
+    width: 200px;
+    border-radius: 20px;
+    font-family: 'Tahoma';
+
+    background-color: rgb(170, 251, 70);
+    border-color: transparent;
+    transition: all 0.2s ease-in;
+}
+#buyNowBtn:hover {
+    cursor: pointer;
+    background-color: rgb(129, 189, 56);
+}
+#slideUp {
+    position: absolute;
+    left: 73%;
+    top: 50%;
+    height: 200px;
+    width: 400px;
+
+    display:flex;
+    flex-flow:column;
+    justify-content:end;
+    color: white;
+    text-align: center;
+    font-family:'Avenir Light';
+    font-size: 30px;
+
+    animation: fade-in 1s ease .4s forwards;
+    opacity: 0;
+
+    transition: all 0.3s ease-out;
+}
+#arrow {
+    font-family:'Wingdings 3';
+    font-size: 90px;
+    animation: arrow-move .7s ease-in-out infinite;
+}
+
+#slideUp.remove {
+    display: none;
+    opacity:0;
+
+}
+
+@font-face {
+    font-family: 'Storm Gust';
+    src: url('fonts/Storm_Gust.woff2') format('woff2'),
+         url('fonts/Storm_Gust.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; 
+  }
+
+  @keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    } to {
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
+    
+  }
+  @keyframes arrow-move {
+    from {
+        opacity: 1;
+        transform: translateY(0px);
+    }  
+    to{
+        opacity: 0;
+        transform: translateY(-80px); }
+    }
+
+    @media screen and (max-width: 600px){
+
+        #mainModal {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            background-image: url("images/bg2.jpg");
+            background-size:cover;
+        
+            border-radius: 50px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: rgba(125, 37, 240, 0.28);
+            width: 330px;
+            height: 700px;
+        
+            margin-top: 5%;
+        }
+
+        #voltImage {
+            position: fixed;
+            top:30%;
+            left:-60px;
+        
+            animation: fade-in 1s ease forwards;
+        }
+
+        #voltImage img {
+            height: 530px;
+            transform: translate(0, 0) rotate(0deg) scale(1);
+            transform-origin: center center;
+        
+            transition: transform 0.08s linear;
+            will-change: transform;
+        }
+
+        #slideUp {
+            position: absolute;
+            left: 9%;
+            top: 1%;
+            height: 200px;
+            width: 400px;
+        
+            display:flex;
+            flex-flow:column;
+            justify-content:end;
+            color: white;
+            text-align: center;
+            font-family:'Avenir Light';
+            font-size: 30px;
+        
+            animation: fade-in 1s ease .4s forwards;
+            opacity: 0;
+        
+            transition: all 0.3s ease-out;
+        }
+
+         
+#slogan {
+    font-family: 'Storm Gust';
+    font-weight: lighter;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    color: #3b82f6; 
+
+    margin-bottom:-10px;
+  
+  background-image: linear-gradient(to right, #b11cfc, #70ff1d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+}
+#introHeader {
+    font-family: 'Tahoma';
+    font-weight: lighter;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+#voltText {
+    color: rgb(180, 255, 67);
+    font-family:'Storm Gust';
+    font-size: 50px;
+    letter-spacing: 5px;
+}
+#preFormula {
+    color: rgb(205, 205, 205);
+    font-family:'Storm Gust';
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+#flavor {
+    color: rgb(216, 88, 255);
+    font-family:'Storm Gust';
+    font-size: 20px;
+    letter-spacing: 8px;
+
+}
+#caption {
+    font-family: 'Avenir Light';
+    font-weight: lighter;
+    color: white;
+    font-size: 18px;
+}
+#buyNowBtn {
+    font-size: 18px;
+    height: 30px;
+    width: 150px;
+    border-radius: 20px;
+    font-family: 'Tahoma';
+
+    background-color: rgb(170, 251, 70);
+    border-color: transparent;
+    transition: all 0.2s ease-in;
+}
+#buyNowBtn:hover {
+    cursor: pointer;
+    background-color: rgb(129, 189, 56);
+}
+#slideUp {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    height: 200px;
+    width: 400px;
+
+    display:flex;
+    flex-flow:column;
+    justify-content:end;
+    color: white;
+    text-align: center;
+    font-family:'Avenir Light';
+    font-size: 20px;
+
+    animation: fade-in 1s ease .4s forwards;
+    opacity: 0;
+
+    transition: all 0.3s ease-out;
+}
+#arrow {
+    font-family:'Wingdings 3';
+    font-size: 30px;
+    animation: arrow-move .7s ease-in-out infinite;
+}
+
+#productInfo {
+    margin-top: 250px;
+    text-align: center;
+
+    left: 10%;
+    top: 30%;
+    width: 300px;
+
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+
+    pointer-events: none; 
+}
+}
+
+#slideUpDiv.delete {
+    display: none;
+}
+
